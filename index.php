@@ -4,8 +4,11 @@
 
  <table>
     <tr>
-        <td>Category name</td>
-        <td>Category Status</td>
+
+        <th>id</th>
+        <th>Category name</th>
+        <th>Category Status</th>
+        <th>Actions </th>
     </tr>
 
     <?php
@@ -14,8 +17,10 @@
         while($row =mysqli_fetch_object($res)){
             ?>
                 <tr>
+                    <td><?php echo $row->id?></td>
                     <td><?php echo $row->name?></td>
                     <td><?php echo $row->status?></td>
+                    <td><a href="deleteCategory.php?id=<?php echo $row->id?>">Delete</a></td>
                 </tr>
         <?php
             }   
