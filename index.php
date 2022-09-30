@@ -20,7 +20,13 @@
                     <td><?php echo $row->id?></td>
                     <td><?php echo $row->name?></td>
                     <td><?php echo $row->status?></td>
-                    <td><a href="deleteCategory.php?id=<?php echo $row->id?>">Delete</a></td>
+                    <td>
+                        <a href="updateCategory.php?id=<?php echo $row->id?>">Update</a>
+                         | 
+                        <a href="deleteCategory.php?id=<?php echo $row->id?>">Delete</a>
+
+
+                    </td>
                 </tr>
         <?php
             }   
